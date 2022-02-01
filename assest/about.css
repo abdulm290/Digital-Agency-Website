@@ -1,0 +1,288 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* image width */
+img{
+    width: 100%;
+}
+
+
+/* about hero section */
+
+.about_hero{
+    width: 100%;
+    height: 450px;
+    padding-bottom: 150px;
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: url(images/portfolios-min.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.about_hero::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.5);
+    top: 0;
+    z-index: 1;
+    
+}
+.about_hero a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    z-index: 111;
+    /* position: absolute; */
+}
+/* about hero section end */
+/* about first section */
+#about_us{
+    background: #fff;
+    padding: 80px 0px;
+    padding-bottom: 50px;
+}
+#about_us .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#about_us .container .left-content{
+    width: 50%;
+    padding-right: 50px;
+}
+#about_us .container .right{
+    width: 50%;
+
+}
+
+#about_us .container .right h2{
+    font-size: 60px;
+    color: var(--black);
+    margin-bottom: 20px;
+    line-height: 70px;
+    letter-spacing: 0.6px;
+}
+#about_us .container .right p{
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+/* steps */
+.about-steps{
+    background: #fff;
+    position: relative;
+    display: block;
+    padding: 80px 0px;
+}
+.about-steps .container .heading h2{
+    font-size: 50px;
+    color: var(--black);
+    margin-bottom: 20px;
+    line-height: 100px;
+    letter-spacing: 0.6px;
+}
+.about-steps .container .content-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 30px;
+}
+.about-steps .container .content-box .items{
+    width: 30%;
+    text-align: center;
+}
+.about-steps .container .content-box .items img{
+   width: 150px;
+   margin: 0 auto;
+   text-align: center;
+}
+.about-steps .container .content-box .items h2{
+    font-size: 24px;
+    line-height: 55px;
+}
+.about-steps .container .content-box .items p{
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+.about-steps .container .items .numb{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: var(--brand-color);
+    color: #fff;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+section.testimonial{
+    padding: 80px 0px;
+}
+.testimonial .sub_heading{
+    margin-bottom: 10px;
+}
+
+.testimonial_slider img{
+    width:100px;
+    height:100px;
+    text-align:center;
+    margin:0 auto;
+    border-radius:50%;
+    margin-bottom:30px;
+    margin-top:50px
+}
+.testimonial_slider p{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto;
+    margin-bottom: 50px;
+
+}
+.testimonial .draggable{
+    height: 100% !important;
+}
+.testimonial .slick-next,
+.testimonial .slick-prev{
+    background: none;
+    padding: 0px;
+}
+.testimonial .slick-prev{
+    /* left: 15px;sxd */
+}
+.testimonial .slick-next{
+    right: 15px;
+}
+.testimonial .slick-next:before,
+.testimonial .slick-prev:before{
+    color:#fff;
+    background: var(--brand-color);
+    padding: 10px;
+    border-radius: 50px;
+}
+.testimonial .slick-dots{
+    margin-top: 40px;
+}
+.testimonial .slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--brand-color);
+}
+.testimonial .slick-dots li button{
+    display: none;
+}
+.testimonial .slick-dots li.slick-active{
+    background: var(--brand-color);
+}
+
+@media (max-width:1000px) {
+    #about_us .container .right h2 {
+        font-size: 45px;
+    }
+    .about-steps .container .content-box .items h2 {
+        font-size: 18px;
+        line-height: 55px;
+    }
+    .about-steps .container .content-box .items p{
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .about-steps .container .content-box .items{
+        width: 32%;
+    }
+    .about-steps .container .items .numb {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background: var(--brand-color);
+        color: #fff;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:800px){
+    .testimonial .slick-next,
+    .testimonial .slick-prev{
+        display: none;
+    }
+}
+@media (max-width:750px){
+    #about_us .container .right h2{
+        line-height: 50px;
+        font-size: 35px;
+    }
+    #about_us .container{
+        flex-direction: column;
+    }
+    #about_us .container .right,
+    #about_us .container .left-content{
+        width: 100%;
+    }
+    #about_us .container .left-content img{
+        text-align: center;
+    }
+    #about_us .container .right h2 {
+        line-height: 80px;
+        font-size: 62px;
+        margin-top: 40px;
+    }
+    #team_us .heading h2,
+    .about-steps .container .heading h2{
+        font-size: 40px !important;
+        line-height: 45px !important;
+    }
+    .about-steps{
+        padding-top: 40px;
+    }
+    .about-steps .container .content-box{
+        flex-direction: row;
+        flex-wrap: wrap !important;
+    }
+    .about-steps .container .content-box .items{
+        width: 45%;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:550px){
+    #about_us .container .right h2 {
+        line-height: 68px;
+        font-size: 46px;
+        margin-top: 40px;
+    }
+    .about-steps .container .content-box .items{
+        width: 95%;
+        margin-bottom: 50px;
+    }
+    #team_us .heading h2, 
+    .about-steps .container .heading h2{
+        font-size: 30px !important;
+    }
+}
+@media (max-width:400px){
+    #about_us .container .right h2 {
+        line-height: 51px;
+        font-size: 30px;
+        margin-top: 40px;
+    }
+}
